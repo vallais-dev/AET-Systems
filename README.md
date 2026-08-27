@@ -46,6 +46,8 @@ Option	Default	Description
 
 Examples:
 
+chmod +x ./aet - first thing first
+
 # Primary mode: Runge function, N=128, 1024 points
 ./aet --mode main --func runge --N 128 --nodes 1024
 
