@@ -27,7 +27,9 @@ LinearStateMap - are all at 0% at ε = 0.01. SINDy is the only one that
 clears anything at ε = 0.1 (8.5%). Persistence and NeuralODE do better 
 than the ML baselines, but still fall below 10% at ε = 0.001.
 
-Numbers: `results/dysts_summary_multi_threshold.csv`. Figure: fig1.
+Numbers: `results/dysts_summary_multi_threshold.csv`.
+
+![Wall of Chaos](results/figures/fig1_wall_of_chaos.png)
 
 ### Synthetic sweep
 
@@ -40,7 +42,9 @@ comparison. It stays at 100% PASS with bounded error, no divergence, no
 NaN. Since I didn't test baselines at these sizes, I'm not making a 
 comparison claim there.
 
-Numbers: `results/synthetic_n_train_summary.csv`. Figure: fig6.
+Numbers: `results/synthetic_n_train_summary.csv`.
+
+![Data-Volume Invariance](results/figures/fig6_error_vs_ntrain.png)
 
 ### Real-world data
 
@@ -48,7 +52,9 @@ Seven datasets - SantaFe laser, OMNI, AAPL, MSFT, GOOGL, SPY, ECG.
 At ε = 0.1σ, pCHA passes all seven. At ε = 0.01σ, six of seven; MSFT is 
 the one that fails. The ML baselines don't pass anything.
 
-Numbers: `results/real_world_benchmarks.csv`. Figures: fig2, fig3, fig4.
+Numbers: `results/real_world_benchmarks.csv`.
+
+![Domain Coverage](results/figures/fig3_domain_coverage.png)
 
 ---
 
