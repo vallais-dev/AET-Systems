@@ -16,11 +16,11 @@ The implementation is closed. Verification is open.
 
 At n_train = 200:
 
-| threshold | pCHA | Persistence | NeuralODE | best of the rest |
-|-----------|------|-------------|-----------|------------------|
-| ε = 0.1   | 99.1% | 77.8% | 76.9% | 8.5% (SINDy) |
-| ε = 0.01  | 97.4% | 33.3% | 33.3% | 0% |
-| ε = 0.001 | 70.1% | 8.5%  | 8.5%  | 0% |
+| threshold | pCHA  | Persistence   | NeuralODE | best of the rest (SINDy) |
+|-----------|-------|-------------- |-----------|------------------|       
+| ε = 0.1   | 99.1% |    77.8%      |   76.9% |      8.5%        |
+| ε = 0.01  | 97.4% |    33.3%      |   33.3% |      0%          |
+| ε = 0.001 | 70.1% |    8.5%       |   8.5%  |      0%          |
 
 The ML baselines — ESN, MLP, NVAR, Transformer, SINDy, EDMD, 
 LinearStateMap — are all at 0% at ε = 0.01. SINDy is the only one that 
@@ -171,7 +171,8 @@ Details in `blind_test_protocol.md` §10.
 
 ## Contact
 
-**email:** your_secure_email@proton.me
+**email:** vallais.aet@proton.me
+**telegram:** @vallais.one
 
 For verification enquiries, community nominations, commercial evaluation.
 
