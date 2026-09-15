@@ -236,5 +236,3 @@ It's an empirical mechanism for testing the method's predictive claims on
 data I haven't seen, under conditions fixed in advance.
 
 ---
-
-*End of protocol.*
