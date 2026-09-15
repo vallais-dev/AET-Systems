@@ -10,7 +10,7 @@ not be modified after test data has been received.*
 pCHA is closed-source. I don't expect anyone to take my numbers on faith. 
 This document is how I make the claims checkable without publishing the 
 method: anyone can send me a dataset, I run pCHA on it blindly, and the 
-result gets published — pass or fail.
+result gets published - pass or fail.
 
 The point is falsifiability, not confirmation. A negative result is a 
 legitimate outcome and gets published with the same standing as a positive 
@@ -18,7 +18,7 @@ one.
 
 ---
 
-## 2. Scope — what I'll accept
+## 2. Scope - what I'll accept
 
 **In scope:**
 
@@ -45,13 +45,13 @@ no claim, positive or negative, about out-of-scope data.
 
 A valid submission has:
 
-1. **A time series** in plain text or CSV — one row per sample, one column 
+1. **A time series** in plain text or CSV - one row per sample, one column 
    per dimension.
 2. **A sampling interval** `dt`, in physical or normalized units.
 3. **A fixed train/test split.** You define it, you don't revise it, the 
    test portion stays out-of-sample.
 4. **A short description** of the system, enough to determine scope.
-5. **A public identifier** — handle, affiliation, or pseudonym with an 
+5. **A public identifier** - handle, affiliation, or pseudonym with an 
    online history.
 
 You'll be asked to confirm three things:
@@ -65,12 +65,12 @@ You'll be asked to confirm three things:
 ## 4. Scope check
 
 Before I run anything, the submission goes through a screening filter. 
-These tests are screening diagnostics — they aren't mathematical proofs 
+These tests are screening diagnostics - they aren't mathematical proofs 
 of the properties they check for.
 
 1. **Chaotic-deterministic screening.** Zero-one test for chaos 
    (Gottwald & Melbourne) or sample entropy on the pre-split portion. 
-   This separates regular from chaotic dynamics. It does not, by itself, 
+   This separates regular from chaotic dynamics. It doesn't, by itself, 
    establish strict determinism.
 
 2. **Embedding dimension check.** False Nearest Neighbors. FNN is 
@@ -218,7 +218,7 @@ protocol.
 - The protocol is announced on the platform where pCHA is presented.
 - Nominations, submissions, and questions go through the contact channel 
   listed in the announcement.
-- Responses — including declines and rejections — are public unless the 
+- Responses including declines and rejections - are public unless the 
   other party asks otherwise.
 
 ---
