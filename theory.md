@@ -47,7 +47,7 @@ holds and the topology is tree-like. The method does not try to track the
 Archimedean trajectory pointwise. It reconstructs the global object 
 underlying the trajectory through the hierarchy of the p-adic tree.
 
-I din't arrive at this by design. The method came out of about three 
+I didn't arrive at this by design. The method came out of about three 
 years of failed attempts, degenerating constraint systems, and dead ends. 
 Most of those looked close to working at the time. The final step was a 
 late-night realization about the algebraic structure of the reconstruction 
