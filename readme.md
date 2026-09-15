@@ -54,7 +54,7 @@ the one that fails. The ML baselines don't pass anything.
 
 Numbers: `results/real_world_benchmarks.csv`.
 
-<img src="results/figures/fig3_domain_coverage.png" alt="Domain Coverage" width="900">
+<img src="results/figures/fig3_domain_coverage.png" alt="Domain Coverage" width="1400">
 
 ---
 
