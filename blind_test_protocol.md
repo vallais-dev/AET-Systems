@@ -142,7 +142,7 @@ Verifiers are selected by the community, not by me. I have no veto.
 
 - Posted publicly on the platform where this protocol is announced.
 - Nominees need a verifiable public track record in dynamical systems, 
-  time-series analysis, numerical methods, or an adjacent area — or at 
+  time-series analysis, numerical methods, or an adjacent area - or at 
   least two years of public technical history on the announcing platform.
 - I may invite specific people. Invitations are non-exclusive: any other 
   qualified nomination is equally eligible.
