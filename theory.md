@@ -1,6 +1,6 @@
 # pCHA: Ultrametric Categorical Reconstruction of Chaos Under Extreme Data Starvation
 
-**pCHA** — *p-adic Categorical Hyperchaos Approximation*
+**pCHA** - *p-adic Categorical Hyperchaos Approximation*
 
 ---
 
@@ -9,8 +9,8 @@
 pCHA is a method for long-horizon forecasting of chaotic trajectories 
 when training data is scarce. It works with as few as 15 observed points, 
 without any knowledge of the governing equations, and produces trajectories 
-out to T = 50 Lyapunov time units. Standard data-driven approaches — neural 
-operators, recurrent networks, sparse regression, Koopman methods — do not 
+out to T = 50 Lyapunov time units. Standard data-driven approaches - neural 
+operators, recurrent networks, sparse regression, Koopman methods - don't 
 survive this regime. pCHA runs entirely inside a p-adic ultrametric state 
 space Q_p³, where the strong triangle inequality 
 d(x,z) ≤ max(d(x,y), d(y,z)) replaces the additive structure of the 
@@ -21,7 +21,7 @@ the global trajectory is assembled from compatible morphisms. On the
 median max-error 4.9 × 10⁻⁴. On seven real-world datasets (laser, climate, 
 ECG, equities) it passes all at ε = 0.1σ. Two boundary cases are documented: 
 ScrollDelay (discontinuous DDE) and MSFT at ε = 0.01σ. The core of the 
-method — prime p, the p-adic embedding, the morphism-extension construction — 
+method - prime p, the p-adic embedding, the morphism-extension construction - 
 is proprietary. Reproducibility is provided through a public blind-test 
 protocol.
 
@@ -32,7 +32,7 @@ protocol.
 Most data-driven methods for chaotic forecasting assume, without saying it 
 out loud, that the training set is dense enough to sample the invariant 
 measure of the flow. When that assumption holds, modern methods work. When 
-it fails — n_train on the order of ten points — they fail in a particular 
+it fails - n_train on the order of ten points - they fail in a particular 
 way. It is not a graceful degradation. It is a structural collapse.
 
 The cause is geometric, not algorithmic. In an Archimedean state space 
@@ -42,12 +42,12 @@ itself to unbounded propagation of a single noisy observation. In the
 limited-history regime, this is a failure of topology, not of optimization.
 
 pCHA takes a different position: the right state space for this regime 
-is not Archimedean but ultrametric. In Q_p³ the strong triangle inequality 
+isn't Archimedean but ultrametric. In Q_p³ the strong triangle inequality 
 holds and the topology is tree-like. The method does not try to track the 
 Archimedean trajectory pointwise. It reconstructs the global object 
 underlying the trajectory through the hierarchy of the p-adic tree.
 
-I did not arrive at this by design. The method came out of about three 
+I din't arrive at this by design. The method came out of about three 
 years of failed attempts, degenerating constraint systems, and dead ends. 
 Most of those looked close to working at the time. The final step was a 
 late-night realization about the algebraic structure of the reconstruction 
@@ -85,7 +85,7 @@ to study attractors, cycles, and ergodicity in non-Archimedean settings
 (Verstegen 1989; Thiran, Verstegen, Weyers 1989; Anashin & Khrennikov 
 2009).
 
-I want to be precise about what this does and does not give us. The 
+I want to be precise about what this does and doesn't give us. The 
 strong triangle inequality does not by itself guarantee bounded error 
 growth: a p-adic map with Lipschitz constant L > 1 still amplifies 
 perturbations over successive iterations. Whether a given reconstruction 
@@ -163,7 +163,7 @@ For a chaotic trajectory embedded in Q_p³, convergence of the
 reconstructed trajectory is governed by the p-adic Lipschitz behavior of 
 the composed maps. Whether the reconstruction stays stable over the 
 prediction horizon is a property of the specific class of maps pCHA 
-constructs; it is documented empirically in §4. I do not claim that the 
+constructs; it is documented empirically in §4. I don't claim that the 
 ultrametric structure alone determines the horizon.
 
 ### 2.5 Hyperchaos classification
@@ -189,7 +189,7 @@ is non-unique; at and above it, the reconstruction closes and accuracy
 rises abruptly.
 
 I read n_train = 15 as the minimal anchor count needed for C_p to close 
-on the benchmark systems. That reading is empirical. I do not claim a 
+on the benchmark systems. That reading is empirical. I don't claim a 
 theorem establishing uniqueness at this specific count. The threshold is 
 a documented property of the class of maps pCHA constructs, and it is 
 consistent across the benchmark.
