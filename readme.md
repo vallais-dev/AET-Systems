@@ -22,8 +22,8 @@ At n_train = 200:
 | ε = 0.01  | 97.4% |    33.3%      |   33.3% |      0%          |
 | ε = 0.001 | 70.1% |    8.5%       |   8.5%  |      0%          |
 
-The ML baselines — ESN, MLP, NVAR, Transformer, SINDy, EDMD, 
-LinearStateMap — are all at 0% at ε = 0.01. SINDy is the only one that 
+The ML baselines - ESN, MLP, NVAR, Transformer, SINDy, EDMD, 
+LinearStateMap - are all at 0% at ε = 0.01. SINDy is the only one that 
 clears anything at ε = 0.1 (8.5%). Persistence and NeuralODE do better 
 than the ML baselines, but still fall below 10% at ε = 0.001.
 
@@ -35,7 +35,7 @@ Numbers: `results/dysts_summary_multi_threshold.csv`. Figure: fig1.
 PASS the whole way, median max error under 6e-4. Persistence drops to 90% 
 at n_train = 15. All the other baselines are at 0% throughout.
 
-I also ran pCHA alone below 15 — down to n_train = 5 — without baseline 
+I also ran pCHA alone below 15 - down to n_train = 5 - without baseline 
 comparison. It stays at 100% PASS with bounded error, no divergence, no 
 NaN. Since I didn't test baselines at these sizes, I'm not making a 
 comparison claim there.
@@ -44,7 +44,7 @@ Numbers: `results/synthetic_n_train_summary.csv`. Figure: fig6.
 
 ### Real-world data
 
-Seven datasets — SantaFe laser, OMNI, AAPL, MSFT, GOOGL, SPY, ECG. 
+Seven datasets - SantaFe laser, OMNI, AAPL, MSFT, GOOGL, SPY, ECG. 
 At ε = 0.1σ, pCHA passes all seven. At ε = 0.01σ, six of seven; MSFT is 
 the one that fails. The ML baselines don't pass anything.
 
@@ -68,7 +68,7 @@ Numbers: `results/real_world_benchmarks.csv`. Figures: fig2, fig3, fig4.
 - non-stationary or regime-shifting data
 - dimension > 3 without an established embedding
 
-pCHA does not solve chaos forecasting in general. It works well on the 
+pCHA doesn't solve chaos forecasting in general. It works well on the 
 class of problems above. Outside that class, I make no claims.
 
 One documented in-scope failure: ScrollDelay, a delay-differential system 
@@ -87,7 +87,7 @@ The rules are in `blind_test_protocol.md`. The short version:
 - I have no veto over who gets picked
 - submissions are processed first-come, first-served inside the declared scope
 - every submission gets logged publicly
-- every result is published — positive or negative
+- every result is published - positive or negative
 - metric, thresholds, and scope are fixed before any test arrives
 
 The protocol is the only document that governs verification. This README 
@@ -102,10 +102,10 @@ the public one. Contact below.
 
 **Open:**
 
-- `theory.md` — the mathematical framework
-- `blind_test_protocol.md` — verification terms
-- `results/` — all aggregated CSV data
-- `results/figures/` — all six figures as PNG and PDF
+- `theory.md` - the mathematical framework
+- `blind_test_protocol.md` - verification terms
+- `results/` - all aggregated CSV data
+- `results/figures/` - all six figures as PNG and PDF
 
 **Closed:**
 
@@ -118,7 +118,7 @@ the public one. Contact below.
 The core implementation is proprietary and remains closed. Instead of 
 open-sourcing the code, I've focused on making the claims fully verifiable 
 through the blind-test protocol. A method can be worth taking seriously 
-without being open source — the question is whether its claims can be 
+without being open source - the question is whether its claims can be 
 checked.
 
 ---
@@ -144,7 +144,7 @@ pCHA/
         └── fig6_error_vs_ntrain.png / .pdf
 ```
 
-No source code, no binaries, no raw `.npy`.
+No source code or binaries.
 
 ---
 
