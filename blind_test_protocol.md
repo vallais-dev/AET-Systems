@@ -1,7 +1,7 @@
 # pCHA — Blind Test Protocol
 
 *This protocol is published before any blind test is conducted, and it will 
-not be modified after test data has been received.*
+not be modified after test data has been received*
 
 ---
 
