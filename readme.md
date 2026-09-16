@@ -179,6 +179,7 @@ Details in `blind_test_protocol.md` §10.
 
 **email:** vallais.aet@proton.me
 **telegram:** @vallais.one
+**X:** "@VallaisOne
 
 For verification enquiries, community nominations, commercial evaluation.
 
