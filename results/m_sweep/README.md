@@ -23,5 +23,5 @@ every system, so the head-to-head against baselines stays fixed and
 reproducible. The sweep is here as a supplementary check proof that 
 the method isn't tuned to one specific anchor frequency.
 
-A full sweep across all 117 dysts systems is future work. Nothing in this 
+A full sweep across all 117 dysts systems and real-data is future work. Nothing in this 
 file should be read as a benchmark result.
