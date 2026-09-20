@@ -14,20 +14,28 @@ The implementation is closed. Verification is open.
 
 ### dysts benchmark (117 systems)
 
-At n_train = 200:
+At n_train = 200, T = 50 Lyapunov units, strict out-of-sample hold-out.
 
-| threshold | pCHA  | Persistence   | NeuralODE | best of the rest (SINDy) |
-|-----------|-------|-------------- |-----------|------------------|       
-| ε = 0.1   | 99.1% |    77.8%      |   76.9% |      8.5%        |
-| ε = 0.01  | 97.4% |    33.3%      |   33.3% |      0%          |
-| ε = 0.001 | 70.1% |    8.5%       |   8.5%  |      0%          |
+**Evaluated on 95th-percentile error (p95):**
 
-The ML baselines - ESN, MLP, NVAR, Transformer, SINDy, EDMD, 
-LinearStateMap - are all at 0% at ε = 0.01. SINDy is the only one that 
-clears anything at ε = 0.1 (8.5%). Persistence and NeuralODE do better 
-than the ML baselines, but still fall below 10% at ε = 0.001.
+| threshold | pCHA | Persistence | NeuralODE | SINDy |
+|-----------|------|-------------|-----------|-------|
+| ε = 0.1   | **99.15%** | 97.44% | 97.44% | 22.22% |
+| ε = 0.01  | **99.15%** | 81.20% | 79.49% | 1.71% |
+| ε = 0.001 | **95.73%** | 13.68% | 13.68% | 0% |
 
-Numbers: `results/dysts_summary_multi_threshold.csv`.
+**Evaluated on maximum error (max):**
+
+| threshold | pCHA | Persistence | NeuralODE | SINDy |
+|-----------|------|-------------|-----------|-------|
+| ε = 0.1   | **99.15%** | 97.44% | 97.44% | 14.53% |
+| ε = 0.01  | **98.29%** | 46.15% | 44.44% | 0% |
+| ε = 0.001 | **79.49%** | 11.97% | 11.97% | 0% |
+
+All other ML baselines (EDMD, ESN, LinearStateMap, MLP, NVAR, Transformer)
+are at 0% at all three thresholds in both evaluations.
+
+Numbers: `results/dysts_full_p95_error.csv` and `results/dysts_full_max_error.csv`.
 
 ![Wall of Chaos](results/figures/fig1_wall_of_chaos.png)
 
@@ -56,6 +64,27 @@ Numbers: `results/real_world_benchmarks.csv`.
 
 ![All Datasets Precision](results/figures/fig4_all_datasets_precision.png)
 
+### HyperRossler (4D hyperchaos)
+
+pCHA is the **only** method that passes HyperRossler at all three thresholds
+(ε = 0.1, 0.01, 0.001). 
+All 9 baselines - Persistence, SINDy, EDMD, NVAR,
+LinearStateMap, ESN, MLP, Transformer, NeuralODE - fail.
+
+### Long-horizon (T = 9900, 9.9 million steps)
+
+pCHA maintains bounded error across 9.9M steps:
+
+| system | dim | max error |
+|--------|-----|-----------|
+| mackeyglass_10d | 10 | 6.73e-08 |
+| nuclearquadrupole_4d | 4 | 5.76e-06 |
+| hypercai_4d | 4 | 2.11e-05 |
+| lorenz | 3 | 3.84e-05 |
+| chen | 3 | 2.14e-04 |
+
+Numbers: `results/long_horizon_T9900.csv`.
+
 ---
 
 ## Scope
@@ -67,12 +96,14 @@ Numbers: `results/real_world_benchmarks.csv`.
 - 1D–3D series directly; higher via standard delay embedding
 - stationary or quasi-stationary data
 
-**Don't use it for:**
+### Out-of-scope (documented boundaries)
 
-- discontinuous systems
-- stochastic systems
-- non-stationary or regime-shifting data
-- dimension > 3 without an established embedding
+| domain | type | reason |
+|--------|------|--------|
+| ChaosNetBench-CML | discrete map | not continuous flow |
+| MGAB | 1D scalar DDE | SINDy outperforms |
+| Streamflow | stochastic, non-stationary | - |
+| KF256 Re=5000 | 2D turbulence | 3D-POD = 56.6% energy |
 
 pCHA doesn't solve chaos forecasting in general. It works well on the 
 class of problems above. Outside that class, I make no claims.
