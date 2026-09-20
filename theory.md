@@ -278,12 +278,28 @@ N_train = 15.*
 
 ### 4.4 Benchmark conditions
 
-Every experiment uses n_train ∈ {5, 15, 50, 100, 200} observations, 
-horizon T = 50 Lyapunov units (50,000 native interpolation steps at 
-dt = 0.001), five anchors per local chart, strict out-of-sample hold-out, 
-and zero RHS. The high-rate trajectory is produced from the benchmark's 
-native sampling rate by a fixed deterministic procedure; no future 
-information is used at any stage.
+### 4.4 HyperRossler (4D hyperchaos)
+
+pCHA is the only method that passes HyperRossler at all three thresholds 
+(ε = 0.1, 0.01, 0.001). All 9 baselines — Persistence, SINDy, EDMD, NVAR, 
+LinearStateMap, ESN, MLP, Transformer, NeuralODE — fail.
+
+### 4.5 Long-horizon (T = 9900, 9.9 million steps)
+
+pCHA maintains bounded error across 9.9M steps:
+
+| system | dim | max error |
+|--------|-----|-----------|
+| mackeyglass_10d | 10 | 6.73e-08 |
+| nuclearquadrupole_4d | 4 | 5.76e-06 |
+| hypercai_4d | 4 | 2.11e-05 |
+| lorenz | 3 | 3.84e-05 |
+| chen | 3 | 2.14e-04 |
+
+![Figure 4](results/figures/fig7_long_horizon.png)
+
+*Figure 4: Long-horizon T = 9900 (9.9M steps): pCHA per-system max error, 
+log scale.*
 
 ---
 
