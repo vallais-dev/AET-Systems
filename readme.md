@@ -52,7 +52,7 @@ comparison claim there.
 
 Numbers: results/synthetic_N100_M20_T250.csv (and four other configs).
 
-![Real World](results/figures/fig6_error_vs_ntrain.png)
+![Real World](results/figures/fig5_real_world.png)
 
 ### Real-world data
 
