@@ -31,5 +31,5 @@ tuned to a specific anchor rate.
 
 ## Figures
 
-- `../figures/fig7_autonomy_vs_pass.png` — pass rate vs autonomy
-- `../figures/fig8_baseline_contrast.png` — pCHA vs baselines across M
+- `../figures/fig8_autonomy_vs_pass.png` — pass rate vs autonomy
+- `../figures/fig9_baseline_contrast.png` — pCHA vs baselines across M
