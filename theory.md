@@ -224,28 +224,33 @@ the method stops working.
 
 ## 4. Empirical Verification
 
-### 4.1 dysts benchmark (117 systems)
+### dysts benchmark (117 systems)
 
-At n_train = 200, T = 50, ε = 0.1:
+At n_train = 200, T = 50 Lyapunov units, strict out-of-sample hold-out.
 
-| Method        | PASS    | Rate   | Median max-err |
-|---------------|---------|--------|----------------|
-| pCHA          | 116/117 | 99.1%  | 4.9 × 10⁻⁴     |
-| Persistence   | 91/117  | 77.8%  | 2.1 × 10⁻²     |
-| NeuralODE     | 90/117  | 76.9%  | 2.0 × 10⁻²     |
-| SINDy         | 10/117  | 8.5%   | 2.2 × 10¹      |
-| ESN           | 0/117   | 0.0%   | 5.9 × 10⁰      |
-| MLP           | 0/117   | 0.0%   | 6.0 × 10⁰      |
-| NVAR          | 0/117   | 0.0%   | 5.6 × 10³      |
-| Transformer   | 0/117   | 0.0%   | 6.0 × 10⁰      |
+**Evaluated on 95th-percentile error (p95):**
 
-At ε = 0.01 and ε = 0.001 pCHA holds 97.4% and 70.1%; every baseline 
-falls below 35%. The full table is in `dysts_summary_multi_threshold.csv`.
+| threshold | pCHA | Persistence | NeuralODE | SINDy |
+|-----------|------|-------------|-----------|-------|
+| ε = 0.1   | **99.15%** | 97.44% | 97.44% | 22.22% |
+| ε = 0.01  | **99.15%** | 81.20% | 79.49% | 1.71% |
+| ε = 0.001 | **95.73%** | 13.68% | 13.68% | 0% |
 
-![Figure 1](results/figures/fig1_wall_of_chaos.png)
+**Evaluated on maximum error (max):**
 
-*Figure 1: PASS rate as a function of accuracy threshold ε. At ε = 0.001, 
-pCHA stays above 70% while every baseline sits below 10%.*
+| threshold | pCHA | Persistence | NeuralODE | SINDy |
+|-----------|------|-------------|-----------|-------|
+| ε = 0.1   | **99.15%** | 97.44% | 97.44% | 14.53% |
+| ε = 0.01  | **98.29%** | 46.15% | 44.44% | 0% |
+| ε = 0.001 | **79.49%** | 11.97% | 11.97% | 0% |
+
+All other ML baselines (EDMD, ESN, LinearStateMap, MLP, NVAR, Transformer) are at 0% at all three thresholds.
+
+The full tables are in dysts_full_p95_error.csv and dysts_full_max_error.csv.
+
+Figure 1: PASS rate as a function of accuracy threshold ε, for both p95 and max error. At ε = 0.001, pCHA stays above 95% (p95) and 79% (max), while every baseline sits below 14%.
+
+!Wall Of Chaos](results/figures/fig1_wall_of_chaos.png)
 
 ### 4.2 Synthetic benchmark (20 systems, T = 50)
 
