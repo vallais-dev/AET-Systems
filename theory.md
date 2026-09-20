@@ -281,7 +281,7 @@ N_train = 15.*
 ### 4.4 HyperRossler (4D hyperchaos)
 
 pCHA is the only method that passes HyperRossler at all three thresholds 
-(ε = 0.1, 0.01, 0.001). All 9 baselines — Persistence, SINDy, EDMD, NVAR, 
+(ε = 0.1, 0.01, 0.001). All 9 baselines - Persistence, SINDy, EDMD, NVAR, 
 LinearStateMap, ESN, MLP, Transformer, NeuralODE — fail.
 
 ### 4.5 Long-horizon (T = 9900, 9.9 million steps)
