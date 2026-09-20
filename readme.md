@@ -50,7 +50,7 @@ comparison. It stays at 100% PASS with bounded error, no divergence, no
 NaN. Since I didn't test baselines at these sizes, I'm not making a 
 comparison claim there.
 
-Numbers: `results/synthetic_n_train_summary.csv`.
+Numbers: results/synthetic_N100_M20_T250.csv (and four other configs).
 
 ![Data-Volume Invariance](results/figures/fig6_error_vs_ntrain.png)
 
