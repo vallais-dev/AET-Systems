@@ -248,9 +248,9 @@ All other ML baselines (EDMD, ESN, LinearStateMap, MLP, NVAR, Transformer) are a
 
 The full tables are in dysts_full_p95_error.csv and dysts_full_max_error.csv.
 
-Figure 1: PASS rate as a function of accuracy threshold ε, for both p95 and max error. At ε = 0.001, pCHA stays above 95% (p95) and 79% (max), while every baseline sits below 14%.
+Figure 1: PASS rate as a function of accuracy threshold ε, for both p95 and max error. At ε = 0.001, pCHA stays above 95% (p95) and 79% (max), while every baseline sits below 14%
 
-!Wall Of Chaos](results/figures/fig1_wall_of_chaos.png)
+![Wall of Chaos](results/figures/fig1_wall_of_chaos.png)
 
 ### 4.2 Synthetic benchmark (20 systems, T = 50)
 
