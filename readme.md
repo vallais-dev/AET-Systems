@@ -62,7 +62,7 @@ the one that fails. The ML baselines don't pass anything.
 
 Numbers: results/real_world_summary.csv and results/real_world_results.csv.
 
-![All Datasets Precision](results/figures/fig4_all_datasets_precision.png)
+![All Datasets Precision](results/figures/fig5_real_world.png)
 
 ### HyperRossler (4D hyperchaos)
 
