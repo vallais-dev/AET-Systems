@@ -256,39 +256,25 @@ Figure 1: PASS rate as a function of accuracy threshold ε, for both p95 and max
 
 Across n_train ∈ {15, 50, 100, 200} pCHA holds 100% PASS with median 
 max-error below 6 × 10⁻⁴. Persistence drops to 90% at n_train = 15. Every 
-other baseline stays at 0% across the whole range. Full data in 
-`synthetic_n_train_summary.csv`.
+other baseline stays at 0% across the whole range. Full data in synthetic_N100_M20_T250.csv (and four other configs).
 
-![Figure 5](results/figures/fig5_pass_vs_ntrain.png)
+Figure 3: PASS per synthetic configuration (20 dysts systems each). pCHA passes 17–20/20 on every config; all ML baselines pass 0/20.
 
-*Figure 5: PASS rate vs. n_train. pCHA is flat at 100% over the full 
-range; Persistence sits at 90–95%; every ML baseline sits near 0%.*
-
-![Figure 6](results/figures/fig6_error_vs_ntrain.png)
-
-*Figure 6: Median max-error vs. n_train, log scale. pCHA at ~5 × 10⁻⁴, 
-Persistence at ~2 × 10⁻², ML baselines at 10²–10³.*
+![Synthetic](results/figures/fig6_synthetic.png)
 
 ### 4.3 Real-world datasets
 
 Seven datasets: SantaFe laser, OMNI (space weather), AAPL, MSFT, GOOGL, 
 SPY, ECG. At ε = 0.1σ, pCHA passes all seven. Persistence passes six of 
 seven. The ML baselines pass none. At ε = 0.01σ, pCHA passes six of 
-seven; the one failure is MSFT. Full data in `real_world_benchmarks.csv`.
+seven; the one failure is MSFT. Full data in `real_world_summary.csv` and 
+`real_world_results.csv`.
 
-![Figure 2](results/figures/fig2_ecg_precision.png)
+![Figure 2](results/figures/fig5_real_world.png)
 
-*Figure 2: ECG precision, log-scale bar chart. pCHA at 6.30 × 10⁻⁵.*
-
-![Figure 3](results/figures/fig3_domain_coverage.png)
-
-*Figure 3: PASS/FAIL at ε = 0.1σ and ε = 0.01σ. The single MSFT failure 
-at ε = 0.01σ is visible and is not hidden.*
-
-![Figure 4](results/figures/fig4_all_datasets_precision.png)
-
-*Figure 4: Cross-dataset max-error. pCHA holds the minimum error on all 
-seven.*
+*Figure 2: Real-world (7 datasets): PASS vs N_train. pCHA stays at 100% 
+across N_train ∈ {15, 50, 100, 200}. Persistence drops to 85.7% at 
+N_train = 15.*
 
 ### 4.4 Benchmark conditions
 
