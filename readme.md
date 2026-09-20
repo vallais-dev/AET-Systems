@@ -142,7 +142,7 @@ the public one. Contact below.
 - `theory.md` - the mathematical framework
 - `blind_test_protocol.md` - verification terms
 - `results/` - all aggregated CSV data
-- `results/figures/` - all six figures as PNG and PDF
+- `results/figures/` - all four figures as PNG and PDF
 
 **Closed:**
 
