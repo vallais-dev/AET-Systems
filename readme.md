@@ -60,7 +60,7 @@ Seven datasets - SantaFe laser, OMNI, AAPL, MSFT, GOOGL, SPY, ECG.
 At ε = 0.1σ, pCHA passes all seven. At ε = 0.01σ, six of seven; MSFT is 
 the one that fails. The ML baselines don't pass anything.
 
-Numbers: `results/real_world_benchmarks.csv`.
+Numbers: results/real_world_summary.csv and results/real_world_results.csv.
 
 ![All Datasets Precision](results/figures/fig4_all_datasets_precision.png)
 
