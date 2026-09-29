@@ -8,9 +8,6 @@ reconstructs trajectories out to 50 Lyapunov time units. The method is
 formulated in a p-adic ultrametric state space and organized categorically. 
 The implementation is closed. Verification is open.
 
- Currently seeking an arXiv endorser for the pCHA framework in math.DS / nlin.CD categories (Endorsement Code: OR7GMT). Feel free to contact via mail, X or telegram.
-
-
 ---
 
 ## Results
